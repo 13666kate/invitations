@@ -1,8 +1,13 @@
-window.addEventListener("load", () => {
-  gsap.from("body", {
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray(".screen").forEach((section) => {
+  gsap.from(section, {
     opacity: 0,
-    scale: 1.05,
-    duration: 0.8,
-    ease: "power2.out"
+    y: 100,
+    duration: 1,
+    scrollTrigger: {
+      trigger: section,
+      start: "top 80%"
+    }
   });
 });

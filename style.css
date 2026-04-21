@@ -52,6 +52,8 @@ p {
 .image-button {
   display: inline-block;
   cursor: pointer;
+   -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 
 .image-button img {
