@@ -1,14 +1,25 @@
 body {
   margin: 0;
   font-family: 'Playfair Display', serif;
-  background: url('assets/osnova.png') center center / cover no-repeat fixed; ;
+  background: url('assets/env.png') center center / cover no-repeat fixed;
   color: white;
   overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  will-change: transform, opacity;
 }
 
 /* Snap scroll */
 html {
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
 }
 
 .screen {
@@ -23,25 +34,12 @@ html {
   padding: 20px;
 }
 
-
-
-.general{
-  background: url('photo.jpg') center/cover no-repeat;
+/* фон секции */
+.general {
+  background: url('assets/photo.jpg') center/cover no-repeat;
 }
 
-.photoOne{
-   background-image: url('assets/One.png');   
-}
-
-.photoGeneral{
-   background-image: url('assets/general.png');    
-}
-.photoTwo{
-    background-image: url('assets/two.png');    
-}
-
-
-/* Текст */
+/* текст */
 h1 {
   font-size: 10vw;
 }
@@ -50,12 +48,23 @@ p {
   font-size: 6vw;
 }
 
-/* Кнопка */
-button {
-  padding: 15px 30px;
-  font-size: 5vw;
-  border: none;
-  background: white;
-  color: black;
-  border-radius: 30px;
+/* кнопка-картинка */
+.image-button {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.image-button img {
+  width:20vw;
+  
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.image-button:hover img {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.image-button:active img {
+  transform: scale(0.95);
 }
