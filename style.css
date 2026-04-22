@@ -57,7 +57,7 @@ p {
 }
 
 .image-button img {
-  width:50vw;
+  width:20vw;
   
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
